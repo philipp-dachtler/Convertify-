@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convertify</title>
+
+  <!-- Favicon für Browser-Tab -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Icon für iOS Safari Home-Bildschirm -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Minimalistischer Stil -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Convertify</h1>
+
+    <div class="mode-toggle">
+      <label>
+        <input type="checkbox" id="darkModeToggle" />
+        Dark Mode
+      </label>
+    </div>
+
+    <div class="select-row">
+      <select id="categorySelect"></select>
+    </div>
+
+    <div class="input-row">
+      <input type="number" id="amountInput" placeholder="Wert eingeben" />
+    </div>
+
+    <div class="unit-row">
+      <select id="fromUnitSelect"></select>
+      <button id="swapBtn">⇄</button>
+      <select id="toUnitSelect"></select>
+    </div>
+
+    <div class="result-row">
+      <span id="resultSpan">–</span>
+      <button id="copyBtn">📋</button>
+    </div>
+
+    <div id="loadingDiv" class="loading">Lade Wechselkurse…</div>
+    <div id="errorDiv" class="error">Fehler beim Laden der Kurse</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
