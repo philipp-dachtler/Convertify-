@@ -1,0 +1,174 @@
+/* Reset und Grundlayout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f0f2f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  max-width: 450px;
+  width: 95vw;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-weight: 400;
+}
+
+.controls,
+.converter,
+.darkmode-toggle {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.selectors {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+  align-items: center;
+}
+
+.selector {
+  flex: 1;
+}
+
+#swapBtn {
+  background: #007aff;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#swapBtn:hover {
+  background-color: #005bb5;
+}
+
+.result {
+  font-size: 1.3rem;
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#copyBtn {
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+#copyBtn:hover {
+  background-color: #ccc;
+}
+
+.loading {
+  font-size: 0.9rem;
+  color: #007aff;
+  margin-top: 0.5rem;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: #d00000;
+  margin-top: 0.5rem;
+}
+
+.darkmode-toggle {
+  font-weight: normal;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Dark Mode */
+body.darkmode {
+  background: #121212;
+  color: #eee;
+}
+
+body.darkmode main {
+  background: #222;
+  box-shadow: 0 3px 12px rgba(255 255 255 / 0.1);
+}
+
+body.darkmode input,
+body.darkmode select {
+  background: #333;
+  border-color: #555;
+  color: #eee;
+}
+
+body.darkmode #swapBtn {
+  background: #3399ff;
+}
+
+body.darkmode #swapBtn:hover {
+  background-color: #77bbff;
+}
+
+body.darkmode #copyBtn {
+  background: #444;
+}
+
+body.darkmode #copyBtn:hover {
+  background-color: #666;
+}
+
+body.darkmode .loading {
+  color: #66aaff;
+}
+
+body.darkmode .error {
+  color: #ff6666;
+}
